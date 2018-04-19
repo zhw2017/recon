@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.pay.recon-two</groupId>
+  <artifactId>recon-two</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>recontwo-model</module>
+  	<module>recon-two-api</module>
+  	<module>recon-two-inner-api</module>
+  	<module>recon-two-core</module>
+  	<module>recon-two-portal</module>
+  </modules>
+  
+  <name>系统与银行日终通道对账</name>
+<description>系统与银行日终通道对账</description>
+<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.pay</groupId>
+				<artifactId>commons-web</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.pay</groupId>
+				<artifactId>commons-hessian</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.pay</groupId>
+				<artifactId>dsmclient</artifactId>
+				<version>1.0.0</version>
+				<exclusions>
+				<exclusion>
+					<artifactId>slf4j-log4j12</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+						<artifactId>log4j</artifactId>
+						<groupId>log4j</groupId>
+				</exclusion>
+			</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>com.pay</groupId>
+				<artifactId>commons-utils</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+<properties>
+		<recon-two-core.version>1.0.5</recon-two-core.version>
+		<recon-two-api.version>1.0.5</recon-two-api.version>
+		<recon-two-model.version>1.0.5</recon-two-model.version>
+		<recon-two-portal.version>1.0.5</recon-two-portal.version>
+		<recon-two-inner-api.version>1.0.5</recon-two-inner-api.version>
+	</properties>
+</project>
